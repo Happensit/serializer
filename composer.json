@@ -1,0 +1,20 @@
+{
+  "name": "happensit/doctrine-serializer",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Happensit",
+      "email": "hello@happensit.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "commty/simple-framework": "dev-master",
+    "jms/serializer": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Happensit\\Serializer\\": "src/"
+    }
+  }
+}
