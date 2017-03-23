@@ -6,7 +6,7 @@ Installation
 
 Use [composer](http://getcomposer.org) to install the provider
 
-    composer require happensit/doctrine-serializer
+    composer require happensit/serializer
     
 Usage
 -----
