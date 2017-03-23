@@ -1,6 +1,7 @@
 {
   "name": "happensit/serializer",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Happensit",
