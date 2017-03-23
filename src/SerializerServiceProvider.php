@@ -7,6 +7,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use JMS\Serializer\Naming\IdenticalPropertyNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\Serializer;
+use Commty\Simple\Application;
 use JMS\Serializer\SerializerBuilder;
 
 class SerializerServiceProvider implements ServiceProviderInterface
@@ -26,6 +27,6 @@ class SerializerServiceProvider implements ServiceProviderInterface
             ->addDefaultHandlers()
             ->build();
 
-        $app->container->setClass(Serializer::class, $serializeBuilder);
+        $app->container->setInstance(Serializer::class, $serializeBuilder);
     }
 }
