@@ -23,10 +23,11 @@ class SerializerServiceProvider implements ServiceProviderInterface
 
         $serializeBuilder = SerializerBuilder::create()
             ->setCacheDir($app->getStoragePath() . '/cache/serializer')
+            ->setDebug(getenv('APP_DEBUG'))
             ->setPropertyNamingStrategy(new SerializedNameAnnotationStrategy(new IdenticalPropertyNamingStrategy()))
             ->addDefaultHandlers()
             ->build();
 
-        $app->container->setInstance(Serializer::class, $serializeBuilder);
+        $app->container->setClass($serializeBuilder);
     }
 }
